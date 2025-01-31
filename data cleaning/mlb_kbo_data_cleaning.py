@@ -23,7 +23,7 @@ team_counts = kbodata.groupby('year')['team'].nunique()
 kbodata['teams'] = kbodata['year'].map(team_counts)
 
 # %%
-# Grouping the KBO data by 'year' and aggregating all columns
+# Grouping the KBO data by 'year' and aggregating all the columns
 kbo_grouped_df = kbodata.groupby('year').agg({
     'average_age': 'mean',
     'runs_per_game': 'mean',
